@@ -1,0 +1,182 @@
+body{
+        background-color: white;
+    }
+    svg{
+
+        background: linear-gradient(0deg, #14003c, #1b1b58, #213274, #254b90, #2764ad, #287fc9, #2a9be4, #2fb7ff);
+        width:100vmin;
+        height:100vmin;
+        display:block;
+        margin:auto;
+        box-shadow:0px 0px 10px black;
+        background-size: cover;
+        padding: 0;
+    }
+
+    #orca1{
+        z-index: 5;
+        position: absolute;
+    }
+    #orca2{
+        z-index: 6;
+        position: absolute;
+        transform: scale(0.5) translateX(70px) translateY(70px) rotateZ(15deg);
+    }
+
+    #background{
+        position: absolute;
+        z-index: 1;
+    }
+    #background2{
+        z-index: 2;
+        position: absolute;
+        transform: scale(0.9) translateX(20px) translateY(20px);
+    }
+    .bubble-holder{
+        width:100vmin;
+        height: 100vmin;
+        position: absolute;
+        top: 1%;
+        left: 25%;
+        overflow:hidden;
+    }
+
+    .bubble-1 {
+        left: 8%;
+        animation-delay: 1s;
+    }
+    .bubble-1 .bubble-animation-y{
+        animation-duration: 7s;
+        animation-delay: 0s;
+    }
+
+    .bubble-2 {
+        left: 40%;
+        animation-delay: 2s;
+    }
+    .bubble-2 .bubble-animation-y{
+        animation-duration: 6s;
+        animation-delay: 2s;
+    }
+
+    .bubble-3 {
+        right: 15%;
+        animation-delay: 1s;
+    }
+    .bubble-3 .bubble-animation-y{
+        animation-duration: 5s;
+        animation-delay: 1.5s;
+    }
+
+    .bubble-4 {
+        left: 8%;
+        animation-delay: 2s;
+    }
+    .bubble-4 .bubble-animation-y{
+        animation-duration: 6s;
+        animation-delay: 3s;
+    }
+
+    .bubble-5 {
+        left: 40%;
+        animation-delay: 1s;
+    }
+    .bubble-5 .bubble-animation-y{
+        animation-duration: 5s;
+        animation-delay: 0;
+    }
+
+    .bubble-6 {
+        left: 45%;
+        animation-delay: 2s;
+    }
+    .bubble-6 .bubble-animation-y{
+        animation-duration: 7s;
+        animation-delay: 3.5s;
+    }
+
+    .bubble-7 {
+        right: 15%;
+        animation-delay: 1s;
+    }
+    .bubble-7 .bubble-animation-y{
+        animation-duration: 5.5s;
+        animation-delay: 3s;
+    }
+
+    .bubble-8 {
+        right: 5%;
+        animation-delay: 2s;
+    }
+    .bubble-8 .bubble-animation-y{
+        animation-duration: 7s;
+        animation-delay: 3s;
+    }
+
+    .bubble-static {
+        width: 500px;
+        height: 500px;
+        border-radius: 100%;
+        background-color: #055E8F;
+        position: absolute;
+    }
+
+    .bubble-container{
+        position: absolute;
+        bottom: -250px;
+    }
+
+    .bubble-large, .bubble-small {
+        border-radius: 100%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1),
+        inset 0px 10px 30px 5px rgba(96, 147, 195, 1);
+    }
+
+    .bubble-large {
+
+        width: 231px;
+        height: 231px;
+    }
+
+    .bubble-small {
+
+        width: 82px;
+        height: 82px;
+    }
+
+    .bubble-animation-x {
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: bubbleXAnimFrames;
+        animation-timing-function: ease;
+        animation-direction: alternate;
+    }
+
+    .bubble-animation-y {
+        animation-iteration-count: infinite;
+        animation-name: bubbleYAnimFrames;
+        animation-timing-function: linear;
+    }
+
+
+    @keyframes bubbleXAnimFrames {
+        0% {
+        transform: translateX(0);
+        }
+        100% {
+        transform: translateX(50px);
+        }
+    }
+
+    @keyframes bubbleYAnimFrames {
+        0% {
+        transform: translateY(0);
+        }
+        50% {
+        opacity: 85%;
+        }
+        100% {
+        transform: translateY(-1250px);
+        opacity: 0;
+        }
+    }
